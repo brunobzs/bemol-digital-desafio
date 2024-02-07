@@ -1,5 +1,17 @@
 # Desafio Bemol Digital
 
+Para executar os testes, é necessário ter o [Node.js](https://nodejs.org/en/) instalado.
+
+## Instalação
+Instalação do Cypress via npm:
+```bash
+npm install cypress --save-dev
+````
+Para rodar os testes, execute o comando:
+```bash
+cypress open
+```
+
 ## Etapa II - Automação de Teste Web I
 Página: http://www.buscacep.correios.com.br
 - A. Realizar a busca com o valor “69005-040”
