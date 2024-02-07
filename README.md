@@ -3,7 +3,7 @@
 Para executar os testes, é necessário ter o [Node.js](https://nodejs.org/en/) instalado.
 
 ## Instalação
-Instalação do Cypress via npm:
+Instalação do [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) via npm:
 ```bash
 npm install cypress --save-dev
 ````
