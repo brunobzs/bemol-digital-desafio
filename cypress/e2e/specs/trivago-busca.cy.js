@@ -28,13 +28,6 @@ describe('Etapa III - Automação de Teste Web II', () => {
     // Clicar no botão de pesquisar
     cy.get(trivagoBusca.botaoPesquisar).focus().click({ force: true})
 
-    // Confirma a seleção da cidade de Manaus
-    cy.get(trivagoBusca.listaDeSugetoes, { timeout: 10000 }).should('be.visible').within(() => {
-      cy.get(trivagoBusca.resultadoBusca).filter(':contains("Manaus")').first().should('be.visible').wait(200).click()
-    })
-
-    // Clica novamente no botão pesquisar e Aguarda a resposta da busca
-    cy.get(trivagoBusca.botaoPesquisar).focus().click({ force: true})
     cy.wait('@accommodationSearch', { timeout: 15000 }).then(({ response }) => {
       expect(response.statusCode).to.eq(200)
     })
