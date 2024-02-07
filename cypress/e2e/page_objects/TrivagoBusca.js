@@ -3,6 +3,14 @@ class TrivagoBusca {
     return '[data-testid="search-form-destination"]'
   }
 
+  get listaDeSugetoes() {
+    return '[data-testid="search-suggestions"]'
+  }
+
+  get resultadoBusca() {
+    return '[data-testid="ssg-element"]'
+  }
+
   get botaoPesquisar() {
     return '[data-testid="search-button-with-loader"]'
   }
@@ -15,13 +23,32 @@ class TrivagoBusca {
     return '[data-testid="search-form-calendar-checkout"]'
   }
 
+  get ordenarPor() {
+    return '[data-testid="sorting-selector"]'
+  }
+
+  get hotelInfo() {
+    return '[data-testid="accommodation-list-element"]'
+  }
+
+  get nomeHotel() {
+    return '[data-testid="item-name"]'
+  }
+
+  get avaliacaoHotel() {
+    return '[data-testid="aggregate-rating"] > .space-x-1 > .mt-px > .leading-none > span'
+  }
+
+  get precoRecomendado() {
+    return '[data-testid="recommended-price"]'
+  }
+
 
   /**
    * Seleciona a data de check-in ou check-out
    *
    * @param { Object } param
    * @param { Boolean } param.isCheckoutDate - Se falso, seleciona a data de hoje como check-in e se verdadeiro seleciona uma data 3 dias a frente do dia de hoje para a data de check-out
-   * @returns {Cypress.Chainable<JQuery<HTMLElement>>}
    */
   selecionaData({ isCheckoutDate }) {
     let date = new Date();
@@ -39,7 +66,11 @@ class TrivagoBusca {
     }
     const dataSelecionada = ano + "-" + mes + "-" + dia;
 
-    return cy.get(isCheckoutDate ? this.dataCheckout : this.dataCheckin).select(dataSelecionada)
+    return cy.get(isCheckoutDate ? this.dataCheckout : this.dataCheckin)
+      .scrollIntoView()
+      .get(`[data-testid="valid-calendar-day-${dataSelecionada}"]`)
+      .click()
+      .wait(500)
   }
 }
 
