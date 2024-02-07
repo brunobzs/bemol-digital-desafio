@@ -25,9 +25,8 @@ describe('Etapa III - Automação de Teste Web II', () => {
 
     cy.get('body').click({ force: true }) // Clicar fora do campo de busca para fechar a lista de sugestões
 
-    // Clicar no botão de pesquisar
+    // Clicar no botão de pesquisar e aguardar a resposta da API
     cy.get(trivagoBusca.botaoPesquisar).focus().click({ force: true})
-
     cy.wait('@accommodationSearch', { timeout: 15000 }).then(({ response }) => {
       expect(response.statusCode).to.eq(200)
     })
