@@ -1,4 +1,4 @@
-# Desafio Bemol Digital
+# Desafio de Automação usando o Cypress.io
 
 Para executar os testes, é necessário ter o [Node.js](https://nodejs.org/en/) instalado.
 
