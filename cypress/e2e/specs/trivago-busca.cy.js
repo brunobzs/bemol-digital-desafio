@@ -2,7 +2,7 @@ import TrivagoBusca from '../page_objects/TrivagoBusca'
 
 const trivagoBusca = new TrivagoBusca()
 
-describe('Etapa III - Automação de Teste Web II', () => {
+describe('Desafio II', () => {
   beforeEach(() => {
     const headers = { 'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',};
 

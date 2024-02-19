@@ -2,7 +2,7 @@ import BuscaCEP from "../page_objects/BuscaCEP";
 
 const buscaCEP = new BuscaCEP();
 
-describe('Etapa II - Automação de Teste Web I', () => {
+describe('Desafio I', () => {
   beforeEach(() => {
     cy.visit('http://www.buscacep.correios.com.br')
     cy.get(buscaCEP.tituloPagina).should('be.visible').and('have.text', 'Busca CEP')
