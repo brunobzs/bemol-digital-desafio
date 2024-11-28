@@ -1,6 +1,6 @@
-import BuscaCEP from "../page_objects/BuscaCEP";
+import BuscaCepPage from "../../page-objects/busca-cep.page";
 
-const buscaCEP = new BuscaCEP();
+const buscaCEP = new BuscaCepPage();
 
 describe('Desafio I', () => {
   beforeEach(() => {

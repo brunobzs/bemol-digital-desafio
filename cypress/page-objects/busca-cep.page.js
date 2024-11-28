@@ -1,4 +1,4 @@
-class BuscaCEP {
+class BuscaCepPage {
   get tituloPagina() {
     return '#titulo_tela > h2'
   }
@@ -54,4 +54,4 @@ class BuscaCEP {
   }
 }
 
-export default BuscaCEP;
+export default BuscaCepPage;

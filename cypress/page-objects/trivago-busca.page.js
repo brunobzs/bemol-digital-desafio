@@ -1,4 +1,4 @@
-class TrivagoBusca {
+class TrivagoBuscaPage {
   get campoBusca() {
     return '[data-testid="search-form-destination"]'
   }
@@ -74,4 +74,4 @@ class TrivagoBusca {
   }
 }
 
-export default TrivagoBusca;
+export default TrivagoBuscaPage;

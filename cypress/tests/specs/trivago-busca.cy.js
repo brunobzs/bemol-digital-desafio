@@ -1,6 +1,6 @@
-import TrivagoBusca from '../page_objects/TrivagoBusca'
+import TrivagoBuscaPage from '../../page-objects/trivago-busca.page'
 
-const trivagoBusca = new TrivagoBusca()
+const trivagoBusca = new TrivagoBuscaPage()
 
 describe('Desafio II', () => {
   beforeEach(() => {
