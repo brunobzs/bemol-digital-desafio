@@ -1,28 +1,27 @@
-# Desafio de Automação usando o Cypress.io
+# Automation using Cypress.io
 
-Para executar os testes, é necessário ter o [Node.js](https://nodejs.org/en/) instalado.
+To run the tests, you must have [Node.js](https://nodejs.org/en/) installed.
 
-## Instalação
-Instalação do [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) via npm:
+## Installation
+Installing [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress) via npm:
 ```bash
-npm install cypress --save-dev
+npm i
 ````
-Para rodar os testes, execute o comando:
+To run the tests, run the command:
 ```bash
 cypress open
 ```
 
-## Desafio I
-Página: http://www.buscacep.correios.com.br
-- A. Realizar a busca com o valor “69005-040”
-- B. Realizar a busca com o valor “Lojas Bemol”
+## Challenge I
+Page: http://www.buscacep.correios.com.br
+- A. Perform the search with the value “69005-040”
+- B. Perform the search with the value “Lojas Bemol”
 
-## Desafio II
-Automatizar o fluxo definido abaixo:
-1. Acessar o site http://www.trivago.com.br
-2. Digitar o valor “Manaus” no campo de busca
-3. Clicar no botão "Pesquisar" Selecionar a opção Ordenar por “Avaliação e
-Sugestões"
-4. Verifique o nome do primeiro da lista
-5. Verifique a avaliação do primeiro da lista
-6. Verifique o valor do primeiro da lista
+## Challenge II
+Automate the flow defined below:
+1. Access the website http://www.trivago.com.br
+2. Enter the value “Manaus” in the search field
+3. Click on the "Search" button Select the option Sort by “Ratings and Suggestions"
+4. Check the name of the first on the list
+5. Check the rating of the first on the list
+6. Check the value of the first on the list

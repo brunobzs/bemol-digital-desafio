@@ -21,9 +21,9 @@ describe('Challenge II', () => {
       cy.get(trivagoSearch.searchResult).filter(':contains("Manaus")').first().should('be.visible').wait(200).click()
     })
 
-    trivagoSearch.selectDate({ isCheckoutDate: false }).wait(500)
+    cy.selectDate({ isCheckoutDate: false }).wait(500)
 
-    cy.get('body').click({ force: true }) // Clicar fora do campo de busca para fechar a lista de sugestões
+    cy.get('body').click({ force: true }) // Click outside the search field to close the list of suggestions
 
     // Click the search button and wait for the API response
     cy.get(trivagoSearch.searchButton).focus().click({ force: true})
@@ -45,7 +45,7 @@ describe('Challenge II', () => {
       cy.get(trivagoSearch.hotelReview).invoke('text').then((review) => {
         hotelInfo.review = review
       })
-      cy.get(trivagoSearch.precoRecomendado).invoke('text').then((price) => {
+      cy.get(trivagoSearch.recommendedPrice).invoke('text').then((price) => {
         hotelInfo.price = price.replace(/[^\d.-]/g, '')
       })
     }).then(() => {
